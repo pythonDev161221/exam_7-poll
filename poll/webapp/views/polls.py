@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 from webapp.forms import PollForm
 from webapp.models import Poll
@@ -28,3 +28,9 @@ class PollCreateView(CreateView):
     model = Poll
     form_class = PollForm
     template_name = 'polls/poll_create_view.html'
+
+
+class PollUpdateView(UpdateView):
+    model = Poll
+    form_class = PollForm
+    template_name = 'polls/poll_update_view.html'

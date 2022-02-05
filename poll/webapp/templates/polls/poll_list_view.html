@@ -10,6 +10,7 @@
     {% for poll in polls %}
     <p>
         <a href="{% url 'poll_detail_view' poll.pk %}">{{ poll.question }}</a>
+        <a href="{% url 'poll_update_view' poll.pk %}">Изменить</a>
     </p>
     {% endfor %}
     {% include 'partial/pagination.html' %}
