@@ -24,6 +24,38 @@
     }
 },
 {
+    "model": "webapp.poll",
+    "pk": 4,
+    "fields": {
+        "question": "dsfgsdfg",
+        "created_at": "2022-02-05T06:53:56.435Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 5,
+    "fields": {
+        "question": "Сколько звезд  на небе?",
+        "created_at": "2022-02-05T06:54:15.695Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 6,
+    "fields": {
+        "question": "Самая большая планета солнечной системы?",
+        "created_at": "2022-02-05T06:54:54.910Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 7,
+    "fields": {
+        "question": "Кто быструу муха или стрекоза?",
+        "created_at": "2022-02-05T07:00:42.278Z"
+    }
+},
+{
     "model": "webapp.choice",
     "pk": 1,
     "fields": {

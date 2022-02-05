@@ -12,4 +12,5 @@
         <a href="{% url 'poll_detail_view' poll.pk %}">{{ poll.question }}</a>
     </p>
     {% endfor %}
+    {% include 'partial/pagination.html' %}
 {% endblock %}

@@ -11,6 +11,8 @@ class PollListView(ListView):
     model = Poll
     template_name = 'polls/poll_list_view.html'
     context_object_name = 'polls'
+    paginate_by = 5
+    paginate_orphans = 1
 
 
 class PollDetailView(DetailView):
@@ -22,3 +24,5 @@ class PollCreateView(CreateView):
     model = Poll
     form_class = PollForm
     template_name = 'polls/poll_create_view.html'
+
+
