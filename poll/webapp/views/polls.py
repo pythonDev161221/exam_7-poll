@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.forms import PollForm
 from webapp.models import Poll
@@ -34,3 +35,9 @@ class PollUpdateView(UpdateView):
     model = Poll
     form_class = PollForm
     template_name = 'polls/poll_update_view.html'
+
+
+class PollDeleteView(DeleteView):
+    model = Poll
+    template_name = 'polls/poll_delete_view.html'
+    success_url = reverse_lazy('poll_list_view')

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<li class="nav-item">
+<a class="nav-link" href="{% url 'poll_list_view' %}">Все вопросы</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'poll_detail_view' poll.pk %}">Посмотреть</a>
+</li>
+{% endblock %}
+
+{% block content %}
+<h3>Вы уверены что хотите удалить вопрос "{{ poll.question }}" ?</h3>
+    <form action="" method="post">
+    {% csrf_token %}
+        <input type="submit" value="Удалить">
+    </form>
+    <a href="{% url 'poll_list_view' %}">Нет</a>
+{% endblock %}
