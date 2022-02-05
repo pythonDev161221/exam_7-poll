@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 
 from webapp.views import PollListView, PollDetailView, PollCreateView, PollUpdateView, PollDeleteView, ChoiceCreateView, \
-    ChoiceUpdateView, ChoiceDeleteView
+    ChoiceUpdateView, ChoiceDeleteView, AnswerView
 
 urlpatterns = [
     path('', PollListView.as_view(), name='poll_list_view'),
@@ -13,5 +13,5 @@ urlpatterns = [
     path('poll/<int:pk>/choice/create/', ChoiceCreateView.as_view(), name='choice_create_view'),
     path('choice/<int:pk>/update/', ChoiceUpdateView.as_view(), name='choice_update_view'),
     path('choice/<int:pk>/delete/', ChoiceDeleteView.as_view(), name='choice_delete_view'),
-
+    path('poll/<int:pk>/answer/', AnswerView.as_view(), name='answer_view'),
 ]

@@ -37,3 +37,4 @@ class ChoiceDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('poll_detail_view', kwargs={'pk': self.object.poll.pk})
+
