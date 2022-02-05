@@ -1,0 +1,50 @@
+[
+{
+    "model": "webapp.poll",
+    "pk": 1,
+    "fields": {
+        "question": "Fastest maraphone runner?",
+        "created_at": "2022-02-05T06:02:41.443Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 2,
+    "fields": {
+        "question": "Who is best footboll player?",
+        "created_at": "2022-02-05T06:03:53.381Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 3,
+    "fields": {
+        "question": "Who is most fameose person?",
+        "created_at": "2022-02-05T06:04:16.036Z"
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 1,
+    "fields": {
+        "answer": "Jony Todasky",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 2,
+    "fields": {
+        "answer": "Usseyn Bolt",
+        "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 3,
+    "fields": {
+        "answer": "Jon Linkoln",
+        "poll": 1
+    }
+}
+]
