@@ -25,14 +25,6 @@
 },
 {
     "model": "webapp.poll",
-    "pk": 4,
-    "fields": {
-        "question": "dsfgsdfg",
-        "created_at": "2022-02-05T06:53:56.435Z"
-    }
-},
-{
-    "model": "webapp.poll",
     "pk": 5,
     "fields": {
         "question": "Сколько звезд  на небе?",
@@ -51,8 +43,16 @@
     "model": "webapp.poll",
     "pk": 7,
     "fields": {
-        "question": "Кто быструу муха или стрекоза?",
+        "question": "Кто быстрее муха или стрекоза?",
         "created_at": "2022-02-05T07:00:42.278Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 8,
+    "fields": {
+        "question": "Кто забил гол во вчерашнем матче?",
+        "created_at": "2022-02-05T07:32:29.776Z"
     }
 },
 {
@@ -77,6 +77,46 @@
     "fields": {
         "answer": "Jon Linkoln",
         "poll": 1
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 5,
+    "fields": {
+        "answer": "fdsgrdf",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 6,
+    "fields": {
+        "answer": "dgsdfg",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 7,
+    "fields": {
+        "answer": "dgsdg",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 8,
+    "fields": {
+        "answer": "sdfgs",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 9,
+    "fields": {
+        "answer": "sdgr",
+        "poll": 8
     }
 }
 ]
