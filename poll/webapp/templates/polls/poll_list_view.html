@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    {% for poll in polls %}
+    <p>
+    {{ poll.question }}
+    </p>
+    {% endfor %}
 {% endblock %}
