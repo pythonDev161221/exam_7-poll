@@ -2,9 +2,6 @@
 
 {% block nav %}
 <li class="nav-item">
-<a class="nav-link" href="{% url 'poll_list_view' %}">Все вопросы</a>
-</li>
-<li class="nav-item">
 <a class="nav-link" href="{% url 'poll_detail_view' poll.pk %}">Посмотреть</a>
 </li>
 {% endblock %}

@@ -26,3 +26,12 @@ class Choice(models.Model):
     def get_absolute_url(self):
         return reverse('poll_detail_view', kwargs={'pk': self.poll.pk})
 
+
+class Answer(models.Model):
+    poll = models.ForeignKey('webapp.Poll', related_name='answers', on_delete=models.CASCADE)
+    answer_date = models.DateTimeField(auto_now_add=True)
+    choice = models.ForeignKey('webapp.Choice', related_name='answers', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.poll}-{self.choice}'
+    
