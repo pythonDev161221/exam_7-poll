@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from webapp.forms import ChoiceForm
 from webapp.models import Choice, Poll
@@ -22,4 +22,10 @@ class ChoiceCreateView(CreateView):
         choice.poll = poll
         choice.save()
         return super().form_valid(form)
+
+
+class ChoiceUpdateView(UpdateView):
+    model = Choice
+    template_name = 'choices/choice_update_view.html'
+    form_class = ChoiceForm
 
