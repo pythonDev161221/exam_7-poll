@@ -25,8 +25,9 @@ class AnswerView(View):
         answer.choice = choice
         answer.save()
         print('post finish')
-        # return reverse("poll_list_view")
-        return render(request, 'polls/poll_list_view.html', {'polls': Poll.objects.all()})
+        return redirect("poll_list_view")
+
+
 
 # class AnswerView(CreateView):
 #     template_name = 'answers/answer_view.html'
@@ -57,3 +58,6 @@ class AnswerView(View):
 #         answer.save()
 #         print('post finish')
 #         return super(AnswerView, self).post(request, *args, **kwargs)
+
+    # template_name = 'polls/poll_list_view.html'
+    # model = Poll
