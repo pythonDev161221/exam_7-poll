@@ -14,6 +14,10 @@ class PollListView(ListView):
     paginate_by = 5
     paginate_orphans = 1
 
+    def get_queryset(self):
+        queryset = super().get_queryset().order_by('-created_at')
+        return queryset
+
 
 class PollDetailView(DetailView):
     model = Poll
@@ -24,5 +28,3 @@ class PollCreateView(CreateView):
     model = Poll
     form_class = PollForm
     template_name = 'polls/poll_create_view.html'
-
-
