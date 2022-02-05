@@ -13,10 +13,25 @@ class AnswerView(View):
         poll = get_object_or_404(Poll, pk=(self.kwargs.get('pk')))
         context['poll'] = poll
         context['choices'] = poll.choices.all()
+        diction = {}
+        c = 0
+        for ch in poll.choices.all():
+            for ans in poll.answers.all():
+                if ans.choice == ch:
+                    c += 1
+                    diction[ch] = c
+        list_dict = []
+        for i, j in diction.items():
+            list_dict.append([i, j])
+        context['list_dict'] = list_dict
+        # summ = 0
+        # for i in list_dict:
+        #     summ = summ + i[1]
+        # for i in list_dict:
+        #     list_dict[]
         return render(request, 'answers/answer_view.html', context)
 
     def post(self, request, *args, **kwargs):
-        print('post start')
         poll = get_object_or_404(Poll, pk=(self.kwargs.get('pk')))
         choice_pk = request.POST.get('choice')
         choice = get_object_or_404(Choice, pk=choice_pk)
@@ -24,7 +39,6 @@ class AnswerView(View):
         answer.poll = poll
         answer.choice = choice
         answer.save()
-        print('post finish')
         return redirect("poll_list_view")
 
 

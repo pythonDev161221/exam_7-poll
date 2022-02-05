@@ -12,5 +12,10 @@
     </select>
         <input type="submit" value="Выбрать">
     </form>
+    {% for list in list_dict %}
+        <div>
+        {{ list.0 }} : {{ list.1 }}
+        </div>
+    {% endfor %}
 
 {% endblock %}
