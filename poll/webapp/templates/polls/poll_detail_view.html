@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>{{ poll.question }}</p>
+    <p>{{ poll.created_at }}</p>
+    <p>
+    {% for choice in poll.choices.all %}
+        <div>
+        {{ choice.answer }}
+        </div>
+    {% endfor %}
+    </p>
+{% endblock %}

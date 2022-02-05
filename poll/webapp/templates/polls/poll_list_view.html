@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
+{% block nav %}
+<li class="nav-item">
+<a class="nav-link" aria-current="page" href="{% url 'poll_create_view' %}">Новый Вопрос</a>
+</li>
+{% endblock %}
+
 {% block content %}
     {% for poll in polls %}
     <p>
-    {{ poll.question }}
+        <a href="{% url 'poll_detail_view' poll.pk %}">{{ poll.question }}</a>
     </p>
     {% endfor %}
 {% endblock %}
