@@ -23,12 +23,13 @@ class AnswerView(View):
         list_dict = []
         for i, j in diction.items():
             list_dict.append([i, j])
-        context['list_dict'] = list_dict
+        # context['list_dict'] = list_dict
         # summ = 0
         # for i in list_dict:
         #     summ = summ + i[1]
-        # for i in list_dict:
-        #     list_dict[]
+        # for i in range(len(list_dict)):
+        #     list_dict[i][2] = list_dict[i]*100/summ
+        context['list_dict'] = list_dict
         return render(request, 'answers/answer_view.html', context)
 
     def post(self, request, *args, **kwargs):
