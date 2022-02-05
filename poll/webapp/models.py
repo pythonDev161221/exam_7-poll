@@ -23,3 +23,6 @@ class Choice(models.Model):
     def __str__(self):
         return f'{self.answer}'
 
+    def get_absolute_url(self):
+        return reverse('poll_detail_view', kwargs={'pk': self.poll.pk})
+
