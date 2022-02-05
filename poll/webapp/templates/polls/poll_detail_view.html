@@ -18,8 +18,9 @@
     <p>
     {% for choice in poll.choices.all %}
         <div>
-        {{ choice.answer }}
-            <a href="{% url 'choice_update_view' choice.pk %}">Изменить ответ</a>
+        {{ choice.answer }} ***
+        <a href="{% url 'choice_update_view' choice.pk %}">Изменить</a> |
+        <a href="{% url 'choice_delete_view' choice.pk %}">Удалить</a>
         </div>
     {% endfor %}
     </p>
